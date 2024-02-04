@@ -1,0 +1,16 @@
+---\|     /---\ --- /---\ --- /---|---
+    |\___/ ___ \___/ ___ \___/    |
+    |                             |
+    |    |                   |    |
+    |STRT|       DATA        |STOP|
+
+8N1: 10 clock cycles, 8 data bits --> 80% efficiency
+32N1: 34 clock cycles, 32 data bits --> 94.118% eff.
+32N1 is more efficient than 8N1 by 14.118 %
+
+The general function is y=x/(x+2), where x is number of data bits.
+This function is a hyperbola and its asymptote lies in 100%.
+
+It is possible to increase efficiency with more data bits,
+but the efficiency grows very slowly, to the point where higher baudrate
+and other forms of encoding become vastly more desirable than jumbograms.

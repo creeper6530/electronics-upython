@@ -1,0 +1,62 @@
+Screen diagram (to scale):
+
+O--------------------------------------------------------------------------------O
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+|                                                                                |
+O--------------------------------------------------------------------------------O
+
+ESC = 0x1B
+
+https://espterm.github.io/docs/VT100%20escape%20codes.html
+
+ESC [?5h = reverse video mode
+ESC [?5l = normal video mode
+
+ESC [m = effects off
+ESC [1m = bold
+ESC [4m = underline
+ESC [5m = blinking (not enabled by default in PuTTY)
+ESC [7m = reverse
+
+ESC [0K = clear from cursor right incl.
+ESC [1K = clear from cursor left incl.
+ESC [2K = clear line
+
+ESC [2J = clear entire screen
+ESC [H = reset cursor to 0;0
+
+ESC [<n>A = up by <n> lines
+ESC [<n>B = down by <n> lines
+ESC [<n>C = right by <n> lines
+ESC [<n>D = left by <n> lines
+ESC 7 = save cursor position
+ESC 8 = go to saved position
+
+ESC [6n = get cursor position
+    response: ESC [<v>;<n>R = cursor is at <v> vertically, <n> horizontally (response is up to 8 characters)
+
+
+
+Miscellaneous note: def clear(): print(ESC+"[2J"+ESC+"[H")
